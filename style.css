@@ -1,0 +1,152 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, b, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+.conteiner{  
+    width: 100%;
+    height: auto;
+    background-image:url("./img/PokemonbackgroundFull.png");
+   
+}
+
+div#divLogo1 img{
+    position: absolute;
+    top: 50%;
+    margin-top: -245px;
+    left: 9%;
+}
+
+#divLogo {
+    overflow: hidden;
+}
+
+#divLogo img {
+    position: absolute;
+    top: 50%;
+    margin-top: 90px;
+    left: 16%;
+
+    max-width: 100%;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+#divLogo:hover img {
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+#divInitGame img {
+    position: absolute;
+    top: 50%;
+    margin-top: -115px;
+    left: 22%;
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-animation: mymove 20s infinite; /* Chrome, Safari, Opera */
+    animation: mymove 20s infinite;
+    animation-delay:2s;
+    transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    -ms-transform: scale(1.5); /* IE 9 */
+    
+}
+
+div#divChoiceBtn {
+    position: absolute;
+    top: 75%;
+    margin-top: 0px;
+    left: 6%;
+}
+
+button#btn1, button#btn2, button#btn3, button#btn4 {
+    background: #008cff;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #eee;
+    text-shadow: none;
+    width: 140px;
+    height: 50px;
+}
+
+button#btn1:hover, button#btn2:hover, button#btn3:hover, button#btn4:hover {
+
+    background: #5884a5;
+    
+    color: #000000;
+    
+    border: 1px solid #eee;
+    
+    border-radius: 20px;
+    
+    box-shadow: 5px 5px 5px #eee;
+    
+    text-shadow:none;
+    
+}
+
+div#divShowImg {
+    position: absolute;
+    top: 50%;
+    margin-top: -135px;
+    left: 19%;
+    width: 400px;
+}
+
+img#imgPokeTag {
+    width: 300px;
+    filter: brightness(0.0);
+}
+
+@keyframes mymove {
+    50% {transform: rotate(30deg);
+}
