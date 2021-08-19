@@ -5,33 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <title>Pokedex</title>
 </head>
 <body>
     <div class="conteiner">
-        <div id="divLogo1">
-            <img src="./img/QuemEessePokemon.png" alt="Quem é esse Pokemon?"/>
+        <div class="homeScreem">
+            <div id="divLogo">
+                <img src="./img/iniciarLogo.png" id="initGame" alt="Iniciar" />
+            </div>
         </div>
-        <div id="divInitGame">
-            <img src="./img/pokeball1.png" alt="Iniciar Jogo"/>
-        </div>
-        <div id="divLogo">
-            <img src="./img/iniciarLogo.png" id="initGame" alt="Iniciar" />
-        </div>
-        <div id="divShowImg" style="display: none">
+        <div class="gameScreem" style="display: none">
+            <div class="gridgame">
+                <div id="divLogo1">
+                    <img src="./img/QuemEessePokemon.png" alt="Quem é esse Pokemon?"/>
+                </div>           
+                <div id="divShowImg" >
 
-        </div>
-        <div id="divShowpokemon" style="display: none">
+                </div>
+                <div id="divShowpokemon" >
 
-        </div>
-        <div id="divChoiceBtn" style="display: none" >
-            <button id="btn1" name="btn1" onclick="pokebtn(this.value)" value=""></button>
-            <button id="btn2" name="btn2" onclick="pokebtn(this.value)" value=""></button>
-            <button id="btn3" name="btn3" onclick="pokebtn(this.value)" value=""></button>
-            <button id="btn4" name="btn4" onclick="pokebtn(this.value)" value=""></button>
+                </div>
+                <div id="divChoiceBtn" >
+                    <button id="btn1" name="btn1" onclick="pokebtn(this.value)" value=""></button>
+                    <button id="btn2" name="btn2" onclick="pokebtn(this.value)" value=""></button>
+                    <button id="btn3" name="btn3" onclick="pokebtn(this.value)" value=""></button>
+                    <button id="btn4" name="btn4" onclick="pokebtn(this.value)" value=""></button>
+                </div>
+            </div>
+            <div class="pokedex">
+                <div class="viewPokemon">
+                    <div class="divheadpokedex">
+                        <head class="headpokedex">
+                            <h1 class="h1headpokedex">Pokedéx</h1>
+                        </head>
+                    </div>
+                    <div class="searchPokemon">
+
+                    </div>
+                    <div class="containerPokedex">
+                        
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
-    <script src="./script.js"></script>
+    
+    <script src="./script.js"></script>    
 </body>
 </html>
