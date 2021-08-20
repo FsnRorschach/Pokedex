@@ -180,7 +180,7 @@ button#btn1:hover::after, button#btn1:focus::after, button#btn2:hover::after, bu
     display: none;
 }
 
-div#divShowImg {
+div#divShowpokemon {
     position: absolute;
     top: 50%;
     margin-top: -135px;
@@ -191,6 +191,46 @@ div#divShowImg {
 img#imgPokeTag {
     width: 300px;
     filter: brightness(0.0);
+}
+
+.divShowpokemon {
+    width: 300px;
+    background-color: floralwhite;
+    height: 42vh;
+    margin: auto;
+}
+
+.viewDivShowPokemon {
+    background-color: azure;
+    width: 300px;
+    height: 300px;
+}
+.viewDivImg {
+    background-color: cornsilk;
+    width: 300px;
+    height: 300px;
+}
+
+figure.viewFigure {
+    width: 300px;
+    height: 300px;
+}
+
+img.viewImgGame {
+    width: 300px;
+    height: 300px;
+}
+
+.viewDivInfo {
+    background-color: blueviolet;
+    width: 300px;
+    height: 137px;
+}
+
+h5.viewH5Info {
+    background-color: azure;
+    width: 300px;
+    height: 40px;
 }
 
 /**************************************** POKEDEX ****************************************/
@@ -207,6 +247,84 @@ h1.h1headpokedex {
     color: #111111;
     font-style: italic;
     margin: 0;
+}
+
+.containerPokedex {
+    background-color: azure;
+    width: 80%;
+    height: 80vh;
+    margin: auto;
+}
+
+.container-cards {
+    background-color: cornsilk;
+    border: inset;
+    width: 220px;
+    height: 30vh;
+    border-color: burlywood;
+}
+
+ul.pokedexResults {
+    background-color: bisque;
+    height: 22vh;
+}
+
+figure {
+    height: 22vh;
+}
+
+li.figures {
+    border: groove;
+    border-color: burlywood;
+    width: 214px;
+    height: 22vh;
+}
+
+img.imgPokedex {
+    width: 213px;
+    height: 22vh;
+}
+
+.div-poke-info {
+    background-color: cornsilk;
+    height: 7vh;
+    width: 214px;
+    margin: 0px;
+    margin-top: 6px;
+}
+
+p.id-poke-info {
+    width: 60px;
+    background-color: yellow;
+    height: 3vh;
+    float: left;
+}
+
+span.id-number {
+    height: 3vh;
+    width: 60px;
+    float: left;
+}
+
+h5 {
+    width: 150px;
+    background-color: blue;
+    height: 3vh;
+    float: right;
+}
+
+.abilitys1 {
+    background-color: aquamarine;
+    width: 105px;
+    height: 4vh;
+    float: left;
+}
+
+.abilitys2 {
+    background-color: aquamarine;
+    width: 105px;
+    height: 4vh;
+    float: right;
 }
 
 @keyframes mymove {

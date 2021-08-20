@@ -1,7 +1,7 @@
 $(document).ready(() => {
 	
-	let imgConteiner = document.querySelector('#divShowImg');
-	let container = document.querySelector('.containerPokedex');
+	let imgConteiner = document.querySelector('.divShowpokemon');
+	let container = document.querySelector('.container-cards');
 
 	$('#initGame').click(event => {
 		event.preventDefault();
@@ -15,22 +15,30 @@ $(document).ready(() => {
 			pokeID =  getRandomInt(min, max);
 			let nomePoke = pokemon.results[pokeID-1].name;
 
-			// let elist = document.querySelectorAll('button');
+			let elist = document.querySelectorAll('button');
 
-			// let pokeTag = document.createElement('img');
 
-			// let tagUl = document.createElement('ul');
-			// let tagLi = document.createElement('li');
-			// let tagFigurePoke = document.createElement('figure');
-			// let tagImgPoke = document.createElement('img');
-			// let tagDivInfo = document.createElement('div');
-			// let tagPInfo = document.createElement('p');
-			// let tagSpanInfo = document.createElement('span');
-			// let tagh5Info = document.createElement('h5');
-			// let tagDivAbilitys1 = document.createElement('div');			
-			// let tagSpanAbilitys1 = document.createElement('span');
-			// let tagDivAbilitys2 = document.createElement('div');			
-			// let tagSpanAbilitys2 = document.createElement('span');
+			let viewDivShowPokemon = document.createElement('div');
+			let viewTagDivImg = document.createElement('div');
+			let viewTagFigure = document.createElement('figure');
+			let viewTagImg = document.createElement('img');
+			let viewTagDivInfo = document.createElement('div');
+			let viewTagh5Info = document.createElement('h5');
+			let viewTagPInfo = document.createElement('p');
+			let viewTagSpanInfo = document.createElement('span');
+
+			let tagUl = document.createElement('ul');
+			let tagLi = document.createElement('li');
+			let tagFigurePoke = document.createElement('figure');
+			let tagImgPoke = document.createElement('img');
+			let tagDivInfo = document.createElement('div');
+			let tagPInfo = document.createElement('p');
+			let tagSpanInfo = document.createElement('span');
+			let tagh5Info = document.createElement('h5');
+			let tagDivAbilitys1 = document.createElement('div');			
+			let tagSpanAbilitys1 = document.createElement('span');
+			let tagDivAbilitys2 = document.createElement('div');			
+			let tagSpanAbilitys2 = document.createElement('span');
 
 		
 						
@@ -39,45 +47,94 @@ $(document).ready(() => {
 					let ind = getRandomInt(1, 4);
 					$('#btn'+ ind).val(pokeID).html(nomePoke);
 					let pokeFields = "https://pokeapi.co/api/v2/pokemon/";
-					setInterval( function(){
-						requestPokeInfo(String(pokeFields + pokeID)
-						)},200);
+					
+					setTimeout(()=> {
+						requestPokeInfo(String(pokeFields + pokeID));
+					},2000);
+					
 				}else{
 					$('#divChoiceBtn button').each(function(index, element) {
 						if(element.value == ""){
 							let provId = getRandomInt(min, max);
 							if(provId != pokeID){
-								nomePoke = pokemon.results[provId-1].name;
-								$('#btn'+ (index+1)).val(provId).html(nomePoke);
+								let nomePoke1 = pokemon.results[provId-1].name;
+								$('#btn'+ (index+1)).val(provId).html(nomePoke1);
 							}else{
 								provId = provId+1;
-								nomePoke = pokemon.results[provId-1].name; 
-								$('#btn'+ (index+1)).val(provId).html(nomePoke);
+								let nomePoke2 = pokemon.results[provId-1].name; 
+								$('#btn'+ (index+1)).val(provId).html(nomePoke2);
 							}
 						}
 					});				
 				}
 			}
 			
-			let imgPoke = pokeAbilitys.sprites.front_default;	
-			pokeTag.setAttribute('src',imgPoke);
-			pokeTag.append(imgPoke);
-			console.log(pokeTag);
+			
 
-			imgConteiner.appendChild(pokeTag);
-			container.appendChild(pokeTag);
+			$('button').click(function(){
+				let valor = $(this).val();
+				let nome = $(this).attr('name');
+				let textname = $(this).text();
+				console.log('valor: '+ valor + ' e name: '+ nome + ' e Texto: ' + textname );
+
+				if(nomePoke == textname){
+					console.log('Voce acertou!');
+
+					let imgPoke = pokeAbilitys.sprites.front_default;	
+                /************************** Criando View do Game ***************************/
+					viewDivShowPokemon.setAttribute('class','viewDivShowPokemon');
+					viewTagDivImg.setAttribute('class','viewDivImg');
+					viewTagFigure.setAttribute('class','viewFigure');
+					viewTagImg.setAttribute('src',imgPoke);
+					viewTagImg.setAttribute('class','viewImgGame');
+					viewTagDivInfo.setAttribute('class','viewDivInfo');
+					viewTagh5Info.setAttribute('class','viewH5Info');
+					viewTagPInfo.setAttribute('class','viewPInfo');
+					viewTagSpanInfo.setAttribute('class','viewTagSpanInfo');
+
+					viewDivShowPokemon.append(viewTagDivImg);
+					viewDivShowPokemon.append(viewTagDivInfo);
+					viewTagDivImg.append(viewTagFigure);
+					viewTagFigure.append(viewTagImg);
+					viewTagDivInfo.append(viewTagh5Info);
+					viewTagDivInfo.append(viewTagSpanInfo);
+
+					imgConteiner.appendChild(viewDivShowPokemon);
+					
+				/******************************* Criando Pokedex ******************************/
+					tagUl.setAttribute('class','pokedexResults');
+					tagLi.setAttribute('class','figures');
+					tagImgPoke.setAttribute('src',imgPoke);
+					tagImgPoke.setAttribute('class','imgPokedex');
+					tagDivInfo.setAttribute('class','div-poke-info');
+					tagPInfo.setAttribute('class','id-poke-info');
+					tagSpanInfo.setAttribute('class','id-number');
+					tagDivAbilitys1.setAttribute('class','abilitys1');					
+					tagDivAbilitys2.setAttribute('class','abilitys2');
+
+					tagUl.append(tagLi);
+					tagLi.append(tagFigurePoke);
+					tagFigurePoke.append(tagImgPoke);
+					tagLi.append(tagDivInfo);
+					tagDivInfo.append(tagPInfo);
+					tagDivInfo.append(tagh5Info);
+					tagPInfo.append(tagSpanInfo);
+					tagDivInfo.append(tagDivAbilitys1);
+					tagDivInfo.append(tagDivAbilitys2);
+					tagDivAbilitys1.append(tagSpanAbilitys1);
+					tagDivAbilitys2.append(tagSpanAbilitys2);
+
+					container.appendChild(tagUl);
+
+				}else{
+					console.log('Voce errouuuuu!');
+				}
+			});
 
 			
-			console.log(' teste saber quando carrega: dentro do settimeout '+ pokeAbilitys);
-			tagUl.setAttribute('class','pokedexResults');
-			tagLi.setAttribute('class','figures');
-			//tagImgPoke.setAttribute('src',imgPoke);
-			tagDivInfo.setAttribute('class','div-poke-info');
-			tagPInfo.setAttribute('class','id-poke-info');
-			tagSpanInfo.setAttribute('class','id-number');
-			tagDivAbilitys1.setAttribute('class','abilitys1');					
-			tagDivAbilitys2.setAttribute('class','abilitys2');
-		},4000);
+
+			
+		},1000);
 	});
 });
 
@@ -114,29 +171,24 @@ function getRandomInt( min , max) {
 }
 
 async function requestPokeInfo(url) {
-	console.log('entrou na requestpoke');
 	try {
 		await fetch(url)
 		.then(response => {
 			// valida se a requisição falhou
-			console.log(response);
 			if (!response.ok) {
 				return new Error('falhou a requisição') // cairá no catch da promise
 			}	
 			// verificando pelo status
 			if (response.status === 404) {
-				return new Error('não encontrou qualquer resultado')
+				return new Error('não encontrou qualquer resultado');
 			}
 			return response.json();})
 		.then(data => {
-			if(url != baseUrl){
-				pokeAbilitys = data;
-				console.log('dentro da request , recebe data '+ pokeAbilitys);
+			if(url == baseUrl){
+				pokemon = data;
 			}
 			else{
-				pokemon = data;
-				
-				console.log(pokemon);		
+				pokeAbilitys = data;	
 			}	
     	});
 	} catch (error) {
@@ -170,3 +222,14 @@ async function requestPokeInfo(url) {
 //         console.log('Falha na consulta', err);
 //     }
 // }
+
+// async function func1() {
+// 	await func1();
+// 	console.log(`Executando func1`);
+  
+// 	await func2();
+// 	console.log(`Executando func2`);
+  
+// 	await func3();
+// 	console.log('Executando func3');
+//   }
