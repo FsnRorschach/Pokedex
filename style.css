@@ -53,7 +53,7 @@ table {
 
 .gridgame {
     float: left;
-    width: 60vw;
+    width: 60%;
     height: 100vh;
     background-color: cornflowerblue;
 }
@@ -64,15 +64,16 @@ div#divLogo1 img {
 
 .pokedex {
     float: right;
-    width: 40vw;
+    width: 40%;
     height: 100vh;
     background-color: rgb(255, 248, 156); 
 }
 
 div#divLogo1 img{
-    margin-top: 20vh;
+    margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 40px;
 }
 
 div#divLogo1 {
@@ -109,7 +110,7 @@ div#divLogo {
 
 div#divChoiceBtn {    
     position: absolute;
-    bottom: 20vh; 
+    bottom: 140px;
     text-align: center;  
     width: 60%;
 }
@@ -198,6 +199,7 @@ img#imgPokeTag {
     background-color: floralwhite;
     height: 42vh;
     margin: auto;
+    margin-top: 10px;
 }
 
 .viewDivShowPokemon {
@@ -219,6 +221,7 @@ figure.viewFigure {
 img.viewImgGame {
     width: 300px;
     height: 300px;
+    filter: brightness(0);
 }
 
 .viewDivInfo {
@@ -239,6 +242,55 @@ h5.viewH5Info {
     width: 100%;
     height: 10vh;
     background-color: lightslategrey;
+}
+
+.searchPokemon {
+    background-color: aqua;
+    width: 100%;
+    height: 10vh;
+}
+
+.searchPokemonInput {
+    float: left;
+    width: 731px;
+    height: 10vh;
+}
+
+.searchDivPInput {
+    height: 10vh;
+    width: 80%;
+    float: left;
+}
+
+input.searchPInput {
+    margin-top: 3vh;
+    margin-left: 90px;
+    width: 20vw;
+    height: 3vh;
+    border-radius: 20px;
+}
+
+span.searchPInputSpan {
+    font-size: large;
+    font-family: emoji;
+}
+
+span.card {
+    font-family: emoji;
+    font-size: 29px;
+    justify-content: center;
+}
+
+span.cardCount {
+    font-family: emoji;
+    font-size: 65px;
+    float: right;
+}
+
+.cardPokemonCount {
+    float: right;
+    width: 120px;
+    height: 10vh;
 }
 
 h1.h1headpokedex {
