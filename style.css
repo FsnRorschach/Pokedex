@@ -55,18 +55,15 @@ table {
     float: left;
     width: 60%;
     height: 100vh;
-    background-color: cornflowerblue;
-}
-
-div#divLogo1 img {
-    width: 650px;
+    background-image: url(./img/PokemonbackgroundFull.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .pokedex {
     float: right;
     width: 40%;
-    height: 100vh;
-    background-color: rgb(255, 248, 156); 
+    height: 100vh; 
 }
 
 div#divLogo1 img{
@@ -74,6 +71,7 @@ div#divLogo1 img{
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 40px;
+    width: 650px;
 }
 
 div#divLogo1 {
@@ -138,56 +136,13 @@ button#btn1, button#btn2, button#btn3, button#btn4 {
     margin: 20px;
 }
 
-button#btn1::before, button#btn2::before, button#btn3::before, button#btn4::before {
-content: '';
-    border-radius: 1000px;
-    min-width: calc(200px + 12px);
-    min-height: calc(60px + 12px);
-    border: 6px solid rgb(0, 88, 251);
-    box-shadow: 0 0 60px rgba(62, 129, 255, 0.746);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    transition: all .3s ease-in-out 0s;
-}
-
-button#btn1:hover .button#btn1:focus, button#btn2:hover .button#btn2:focus, button#btn3:hover .button#btn3:focus, button#btn4:hover .button#btn4:focus{
-
-    color: #313133;
-    transform: translateY(-6px);
-    
-}
-button#btn1:hover::before, button#btn1:focus::before, button#btn2:hover::before, button#btn2:focus::before, button#btn3:hover::before, button#btn3:focus::before, button#btn4:hover::before, button#btn4:focus::before {
-    opacity: 1;
-}
-
-button#btn1::after, button#btn2::after, button#btn3::after, button#btn4::after {
-    content: '';
-    width: 30px; height: 30px;
-    border-radius: 100%;
-    border: 6px solid #00FFCB;
-    position: absolute;
-    z-index: -1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: ring 1.5s infinite;
-}
-
-button#btn1:hover::after, button#btn1:focus::after, button#btn2:hover::after, button#btn2:focus::after, button#btn3:hover::after, button#btn3:focus::after, button#btn4:hover::after, button#btn4:focus::after, {
-    animation: none;
-    display: none;
-}
-
-div#divShowpokemon {
+/* div#divShowpokemon {
     position: absolute;
     top: 50%;
     margin-top: -135px;
     left: 19%;
     width: 400px;
-}
+} */
 
 img#imgPokeTag {
     width: 300px;
@@ -196,19 +151,16 @@ img#imgPokeTag {
 
 .divShowpokemon {
     width: 300px;
-    background-color: floralwhite;
     height: 42vh;
     margin: auto;
     margin-top: 10px;
 }
 
 .viewDivShowPokemon {
-    background-color: azure;
     width: 300px;
     height: 300px;
 }
 .viewDivImg {
-    background-color: cornsilk;
     width: 300px;
     height: 300px;
 }
@@ -225,15 +177,20 @@ img.viewImgGame {
 }
 
 .viewDivInfo {
-    background-color: blueviolet;
     width: 300px;
-    height: 137px;
+    height: 140px;
 }
 
 h5.viewH5Info {
     background-color: azure;
-    width: 300px;
-    height: 40px;
+    border-radius: 20px;
+    width: 110px;
+    height: 45px;
+    margin: 0 auto;
+    font-family: emoji;
+    font-size: 35px;
+    text-align: center;
+    padding-top: 5px;
 }
 
 /**************************************** POKEDEX ****************************************/
@@ -246,8 +203,10 @@ h5.viewH5Info {
 
 .searchPokemon {
     background-color: aqua;
-    width: 100%;
+    width: 0 auto;
     height: 10vh;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .searchPokemonInput {
@@ -258,16 +217,17 @@ h5.viewH5Info {
 
 .searchDivPInput {
     height: 10vh;
-    width: 80%;
-    float: left;
+    flex: 1 1 30vw;
+    margin: 1px;
 }
 
 input.searchPInput {
-    margin-top: 3vh;
-    margin-left: 90px;
+    margin-top: 25px;
+    margin-left: 25px;
     width: 20vw;
-    height: 3vh;
-    border-radius: 20px;
+    height: 50px;
+    border-radius: 30px;
+    float: left;
 }
 
 span.searchPInputSpan {
@@ -288,32 +248,84 @@ span.cardCount {
 }
 
 .cardPokemonCount {
-    float: right;
     width: 120px;
     height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1.h1headpokedex {
-    font-family: Georgia;
+    font-family: auto;
+    font-size: 6em;
     text-align: center;
-    color: #111111;
-    font-style: italic;
-    margin: 0;
+    color: rgb(17, 17, 17);
+    font-style: inherit;
+    margin: 0px;
 }
 
 .containerPokedex {
-    background-color: azure;
-    width: 80%;
-    height: 80vh;
-    margin: auto;
+    background-image: url(./img/pokeball1.png);
+    background-repeat: no-repeat;
+    background-size: 60vw;
+    width: 90%;
+    height: auto;
+    min-height: 80vh;
+    margin: 0 auto;
+    overflow-y: scroll;
+    text-align: center;
 }
 
 .container-cards {
-    background-color: cornsilk;
+    height: 25vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container-cards > ul {
+    flex: 1 1 110px;
+    margin: 1px;
+    height:295px;
+}
+
+div#cardDivPInfo {
+    width: 60px;
+    height: 35px;
+    float: left;
+    border-top: ridge;
+}
+
+div#cardDivH5Info {
+    width: 140px;
+    height: 35px;
+    float: right;
+    border-top: ridge;
+}
+
+div#cardDivAbilitys1 {
+    width: 100px;
+    height: 35px;
+    float: left;
+    border-top: ridge;
+}
+
+div#cardDivAbilitys2 {
+    border-top: ridge;
+    width: 100px;
+    height: 35px;
+    float: right;
+}
+
+.container-cards >ul >li {
+    background-color: ghostwhite;
     border: inset;
-    width: 220px;
-    height: 30vh;
-    border-color: burlywood;
+    width: 200px;
+    height: 285px;
+    margin: 1px;
+}
+
+div#cardDivFigure{
+    height: 20vh;
 }
 
 ul.pokedexResults {
@@ -322,7 +334,7 @@ ul.pokedexResults {
 }
 
 figure {
-    height: 22vh;
+    height: 20vh;
 }
 
 li.figures {
@@ -335,6 +347,10 @@ li.figures {
 img.imgPokedex {
     width: 213px;
     height: 22vh;
+}
+
+img#cardImgPoke {
+    width: 200px;
 }
 
 .div-poke-info {
@@ -358,10 +374,47 @@ span.id-number {
     float: left;
 }
 
-h5 {
-    width: 150px;
+p.cardPInfo {
+    width: 20%;
+    float: left;
+    height: 3vh;
+}
+
+h5.cardH5Info {
+    width: 78%;
     background-color: blue;
     height: 3vh;
+    float: right;
+}
+
+.cardDivInfo {
+    height: 8vh;
+    background-color: aquamarine;
+}
+
+.cardDivAbilitys1 {
+    width: 50%;
+    background-color: aqua;
+    height: 5vh;
+    float: left;
+}
+
+ul.cardUl {
+    display: inline-block;
+    width: 220px;
+    height: 30vh;
+}
+
+li.cardLi {
+    width: 220px;
+    height: 30vh;
+    display: inline-block;
+}
+
+.cardDivAbilitys2 {
+    width: 50%;
+    background-color: aqua;
+    height: 5vh;
     float: right;
 }
 
@@ -378,23 +431,38 @@ h5 {
     height: 4vh;
     float: right;
 }
+/*****************Anima Loader******************/
 
-@keyframes mymove {
-    50% {transform: rotate(30deg);
-}
-
-@keyframes ring {
-  0% {
-    width: 20px;
-    height: 20px;
-    opacity: 1;
-  }
-  100% {
-    width: 200px;
+.c-loader {
+    animation: is-rotating 1s infinite;
+    border: 10px solid #fbf04d;
+    border-radius: 50%;
+    border-top-color: #1d57f5;
     height: 200px;
-    opacity: 0;
+    width: 200px;
   }
-}
+  
+  .c-loader1 {
+    animation: is-rotating 1s infinite;
+    border: 5px solid #fbf04d;
+    border-radius: 50%;
+    border-top-color: #1d57f5;
+    height: 400px;
+    width: 400px;
+    margin: 0 auto;
+  }
 
+  @keyframes is-rotating {
+    to {
+      transform: rotate(1turn);
+    }
+  }
 
-
+/* 
+Esse CSS vai ser aplicado apenas em resoluções até 768px, abrangendo inúmeros devices mobile. */
+/* mobile phone
+@media all and (max-width: 768px) {
+    #divContent{
+     overflow:auto; 
+    }
+} */

@@ -10,8 +10,12 @@
 </head>
 <body>
     <div class="conteiner">
+        <inpu class="hidden" class="pokeID" value=""></inpu>
+        <inpu class="hidden" class="pokeId" value=""></inpu>
         <div class="homeScreem">
-            <div id="divLogo">
+            <div class="c-loader" style="display: none">
+            </div>
+            <div id="divLogo" style="display: none">
                 <img src="./img/iniciarLogo.png" id="initGame" alt="Iniciar" />
             </div>
         </div>
@@ -19,15 +23,16 @@
             <div class="gridgame">
                 <div id="divLogo1">
                     <img src="./img/QuemEessePokemon.png" alt="Quem é esse Pokemon?"/>
-                </div> 
-                <div class="divShowpokemon" >
+                </div>
+                <div class="c-loader1" style="display: none"></div> 
+                <div class="divShowpokemon" style="display: none" >
 
                 </div>
-                <div id="divChoiceBtn" >
-                    <button id="btn1" name="btn1"  value=""></button>
-                    <button id="btn2" name="btn2"  value=""></button>
-                    <button id="btn3" name="btn3"  value=""></button>
-                    <button id="btn4" name="btn4"  value=""></button>
+                <div id="divChoiceBtn" style="display: none">
+                    <button type="button" class="btn" id="btn1" name="btn1" onclick="escolherBtnClick(this)" value=""></button>
+                    <button type="button" class="btn" id="btn2" name="btn2" onclick="escolherBtnClick(this)" value=""></button>
+                    <button type="button" class="btn" id="btn3" name="btn3" onclick="escolherBtnClick(this)" value=""></button>
+                    <button type="button" class="btn" id="btn4" name="btn4" onclick="escolherBtnClick(this)" value=""></button>
                 </div>
             </div>
             <div class="pokedex">
@@ -39,7 +44,7 @@
                     </div>
                     <div class="searchPokemon">
                         <div class="searchDivPInput">
-                            <span class="searchPInputSpan"><input type="text" class="searchPInput">Buscar Pokemon</span>
+                            <span class="searchPInputSpan"><input type="text" class="searchPInput"><a href="https://fontmeme.com/pt/fonte-de-pokemon/"><img src="https://fontmeme.com/permalink/210824/6db51bd6064dbd017a66fd69e361cbb1.png" alt="fonte-de-pokemon" border="0"></a></span>
                         </div>
                         <div class="cardPokemonCount">
                             <span class="card">Card's</span>
