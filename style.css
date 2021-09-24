@@ -317,15 +317,15 @@ div#cardDivAbilitys2 {
 }
 
 .container-cards >ul >li {
-    background-color: ghostwhite;
-    border: inset;
+    background-color: rgb(230, 230, 230);
     width: 200px;
-    height: 285px;
+    height: 200px;
     margin: 1px;
 }
 
-div#cardDivFigure{
-    height: 20vh;
+div#cardDivFigure_1 {
+    width: 200px;
+    height: 200px;
 }
 
 ul.pokedexResults {
@@ -349,7 +349,7 @@ img.imgPokedex {
     height: 22vh;
 }
 
-img#cardImgPoke {
+img.cardImgPoke {
     width: 200px;
 }
 
